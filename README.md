@@ -1,12 +1,12 @@
-#Academic ERP
+# **Academic ERP**
 
-##8.8. Placement History :
+## **8.8. Placement History :**
 
 Allow the employee of the outreach department to login and view the history of all placed/unplaced students. 
 Give an interface to filter the details according to organisation, year, domain etc. 
 On selection of a certain organisation show all placement history along with Alumni presently working there.
 
-###Features Implemented :
+### **Features Implemented :**
 
 1. Only the Employees of the outreach department are allowed to login.
 2. After logging in, the user is provided with various filters and results are displayed accordingly.
