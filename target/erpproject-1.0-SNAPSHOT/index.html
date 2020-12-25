@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Login</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.7.0/js/all.js"></script>
+    <style>
+        .modal-content{
+            background-color: #ffffff;
+            opacity: 0.90;
+            padding:0 20px;
+            box-shadow: 2px 2px 5px #5a6268;
+            margin: 0 auto;
+            margin-top: 120px;
+        }
+        .img{
+            margin-top: -80px;
+            margin-bottom: 0px;
+            border-radius: 10px;
+            height: 150px;
+            width: 150px;
+        }
+        .tg1{
+            color: #000000;
+            font-size: large;
+        }
+        .tg2{
+            margin-bottom: 30px;
+            margin-top: 5px;
+            box-shadow: 2px 2px 5px #5a6268;
+        }
+        .tg3{
+            margin-bottom: 40px;
+            margin-top: 10px;
+            width: 170px;
+            height: 50px;
+            box-shadow: 2px 2px 5px #5a6268;
+        }
+        ::placeholder{
+            color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-light">
+<div class="modal-dialog modal-content">
+    <div class="py-5 text-center">
+        <img alt="" class="img" src="clg5.jpeg" width="72">
+    </div>
+    <form class="form-signin" id="login-validation">
+        <h2 style="margin-bottom: 10px; color: #000000;" class="text-center"><b>LOGIN</b></h2>
+        <div class="mb-3">
+            <label for="first_name" class="tg1"><b>First name</b></label>
+            <input class="form-control tg2" id="first_name" placeholder="Please enter your name!!" required type="text" value="">
+            <div class="invalid-feedback">
+                Valid first name is required.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="tg1"><b>Email Address</b></label>
+            <input class="form-control tg2" id="email" placeholder="you@example.com" required type="email">
+            <div class="invalid-feedback">
+                Please enter a valid email address for updates.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="departments" class="tg1"><b>Department</b></label>
+            <select class="custom-select d-block w-100 tg2" id="departments" required>
+                <option value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid Department/s.
+            </div>
+        </div>
+
+        <button class="btn btn-lg btn-dark btn-block tg3 float-right" id="submit-button" type="submit">
+            <i class="fas fa-sign-in-alt"></i>
+            <b>Sign in</b>
+        </button>
+        <button class="btn btn-lg btn-dark btn-block tg3 float-right" disabled id="spinner-button" style="display: none;" type="submit">
+            <span aria-hidden="true" class="spinner-grow spinner-grow-sm text-light" role="status"></span>
+            Signing in...
+        </button>
+        <div class="alert alert-warning" id="login-alert" role="alert" style="display: none; margin-top: 120px">
+            Only Outreach Employees are allowed!!
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/login-validation.js"></script>
+</html>

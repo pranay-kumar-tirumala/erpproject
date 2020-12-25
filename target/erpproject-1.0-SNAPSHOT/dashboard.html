@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter students</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.7.0/js/all.js"></script>
+    <style>
+        .modal-content{
+            background-color: #ffffff;
+            opacity: 0.90;
+            padding:0 20px;
+            box-shadow: 2px 2px 5px #1b1e21;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+        .img{
+            margin-top: -80px;
+            margin-bottom: 0px;
+            border-radius: 10px;
+            height: 150px;
+            width: 150px;
+        }
+        .tg1{
+            color: #000000;
+            font-size: large;
+            margin-bottom: 10px;
+            margin-top: 70px;
+        }
+        .tg2{
+            margin-bottom: 30px;
+            margin-top: 10px;
+            box-shadow: 2px 2px 5px #5a6268;
+        }
+        .tg3{
+            margin-bottom: 40px;
+            margin-top: 10px;
+            width: 150px;
+            height: 50px;
+            box-shadow: 2px 2px 5px #5a6268;
+        }
+        ::placeholder{
+            color: #000000;
+        }
+        .logout_button{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 150px;
+            height: 50px;
+            box-shadow: 2px 2px 5px #5a6268;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<form>
+    <button id="logout_button" class="logout_button btn btn-block btn-lg btn-dark" type="button" onclick="location.href='index.html';">
+        <i class="fas fa-sign-out-alt"></i>
+        <b>Logout</b>
+    </button>
+</form>
+
+<div class="container modal-content">
+    <div class="py-5 text-center">
+        <img alt="" class="img" height="72" src="clg5.jpeg" width="72">
+        <h2 style="margin-top: 25px; color: #000000;" class="text-center"> <b> Placement History </b> </h2>
+    </div>
+
+    <p id="end_result1" class="tg1">
+    <table class="table table-striped table-hover table-bordered thead-dark tg2" id="results_table1">
+    </table>
+    </p>
+</div>
+
+<div class="container modal-content" style="margin-top: 70px">
+    <form class="needs-validation-students" id="form-validation" novalidate>
+        <div class="mb-3" id="div-choices">
+            <label for="options" class="tg1"> <b> Filter Students based on: </b> </label>
+            <select class="custom-select d-block w-100 tg2" id="options" required>
+                <option value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid option/s.
+            </div>
+        </div>
+
+        <button class="btn btn-lg btn-dark btn-block tg3 float-right" id="button1" type="button" onclick="button_options()">
+            <b>Go</b>
+        </button>
+
+        <div class="mb-3" style="display:none"  id="div-Organisation" >
+            <label for="options" class="tg1"> <b> Choose an Organisation </b> </label>
+            <select class="custom-select d-block w-100 tg2" id="org" required>
+                <option value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid organisation/s.
+            </div>
+        </div>
+
+        <div class="mb-3" style="display:none" id="div-Year">
+
+            <label for="options" class="tg1"> <b> Choose an Year </b> </label>
+            <select class="custom-select d-block w-100 tg2" id="year" required>
+                <option value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid year/s.
+            </div>
+        </div>
+
+        <div class="mb-3" style="display:none" id="div-Domain">
+            <label for="options" class="tg1"> <b> Choose a Domain </b> </label>
+            <select class="custom-select d-block w-100 tg2" id="domain" required>
+                <option value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid Domain/s.
+            </div>
+        </div>
+
+        <div class="mb-3" style="display:none" id="div-Specialisation">
+            <label for="options" class="tg1"> <b> Choose a Specialisation </b> </label>
+            <select class="custom-select d-block w-100 tg2" id="Specialisation" required>
+                <option value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid Specialisation/s.
+            </div>
+        </div>
+
+        <div class="mb-3" style="display:none" id="for_button">
+            <button class="btn btn-lg btn-dark btn-block tg3 float-right" id="button2" type="submit">
+                <b>Apply Filter</b>
+            </button>
+        </div>
+
+        <p id="end_result" class="tg1" style="margin-top: 90px">
+        <table class="table table-striped table-bordered table-hover thead-dark tg2" style="margin-top: 30px" id="results_table">
+        </table>
+
+        <p id="alumni_p" class="tg1" style="margin-top: 30px">
+        </p>
+
+        <table class="table table-striped table-bordered table-hover thead-dark tg2" id="alumni_table">
+        </table>
+        </p>
+
+    </form>
+
+</div>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+</footer>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/form-validation.js"></script>
+</html>
