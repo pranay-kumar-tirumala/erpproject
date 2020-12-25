@@ -17,7 +17,7 @@ On selection of a certain organisation show all placement history along with Alu
     4. Specialization
     5. Organisation
     6. Alumni
-3. On selecting Placed(or Not Placed), details of all those students who are placed(or not placed) are displayed.
+3. On selecting Placed(or Not Placed), details of all those students who are placed(or not placed) is displayed.
 4. On selecting Domain or Specialization or Organisation, the user is further provided with one more filter to choose the appropriate option.
    eg: If Organisation is selected, then one more filter containing various Organisation names is displayed. Upon selecting some organisation, the details of all 
        the students who got placed in that organization is displayed. On top of that,the details of Alumni(If any) working in that organisation is displayed in a seperate table.
